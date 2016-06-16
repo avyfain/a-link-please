@@ -24,4 +24,4 @@ if __name__ == '__main__':
     img = 'img/{}.png'.format(random.choice(range(10)))
     message = '{}, @{}!'.format(random.choice(phrases), username)
 
-    twitter.update_with_media(filename=img, status=message)
+    twitter.update_with_media(filename=img, status=message, in_reply_to_status_id=random_tweet.id)
