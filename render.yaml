@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: bsky-link-bot
+    env: python
+    schedule: "0 */2 * * *"  # Runs every 2 hours
+    buildCommand: pip install atproto python-dotenv
+    startCommand: python bsky.py 
